@@ -2,7 +2,6 @@ package com.paint.denis.exchange;
 
 import com.google.gson.JsonObject;
 import com.paint.denis.exchange.CurrenciesModel.CurrenciesModel;
-import com.paint.denis.exchange.ExchangeRatesM.Rate;
 
 import retrofit2.Call;
 import retrofit2.Retrofit;
@@ -22,21 +21,6 @@ public interface Request {
             @Query("compact") String compact);
 
 
-//    Call<List<News>> getNews(
-//            @Query("page") int page,
-//            @Query("order") String order,
-
-
-//https://free.currencyconverterapi.com/api/v6/convert?q=USD_PHP&compact=y
-
-//    @GET("convert?q={first}_RUB&compact=y")
-//    //Call<String> getExchange(@Path("first") String first,@Path("second") String second);
-//    Call<String> getExchange(@Path("first") String first);
-
-//    @GET("convert?q="+first+"_RUB&compact=y")
-//    Call<String> getExchange(@Query("first") String first);
-
-
     class Factory {
         private static Retrofit retrofit;
 
@@ -52,6 +36,3 @@ public interface Request {
         }
     }
 }
-//https://free.currencyconverterapi.com/api/v6/convert?q=USD_PHP&compact=y
-//{"USD_RUB":{"val":65.986038}}
-//https://free.currencyconverterapi.com/api/v6/currencies

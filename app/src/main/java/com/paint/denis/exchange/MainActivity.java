@@ -53,35 +53,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Param param = new Param();
-
         spinnerUp = (Spinner) findViewById(R.id.upSpinner);
         spinnerDown = (Spinner) findViewById(R.id.downSpinner);
-        //test = (TextView) findViewById(R.id.testTextView);
-        //Button button = (Button) findViewById(R.id.run);
         upEditText = findViewById(R.id.upEditText);
         downEditText = findViewById(R.id.downEditText);
 
         setApi();
         loadCurrencies();
 
-//        setTest(String.valueOf(exchangeRate));
-
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                getExchangeRates("RUB","USD");
-//            }
-//        });
 
         upEditText.addTextChangedListener(new TextWatcher() {
 
             // the user's changes are saved here
             public void onTextChanged(CharSequence c, int start, int before, int count) {
-
-//                Double result = Math.round(1000.0 * ( Double.parseDouble(c.toString()) * exchangeRate))/1000.0;
-//                //Math.round(1000.0 * result)/1000.0;
-//                downEditText.setText(result.toString());
 
             }
 
@@ -96,24 +80,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        downEditText.addTextChangedListener(new TextWatcher() {
-//
-//            // the user's changes are saved here
-//            public void onTextChanged(CharSequence c, int start, int before, int count) {
-//                //getDownEditText();
-//                //ExchangeRate.getExchange(getUpEditText(),getDownEditText(),exchangeRate,false);
-//            }
-//
-//            public void beforeTextChanged(CharSequence c, int start, int count, int after) {
-//                // this space intentionally left blank
-//            }
-//
-//            public void afterTextChanged(Editable c) {
-//                Double result = Math.round(1000.0 * ( Double.parseDouble(c.toString()) * exchangeRate))/1000.0;
-//                //Math.round(1000.0 * result)/1000.0;
-//                upEditText.setText(result.toString());
-//            }
-//        });
 
         spinnerUp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View itemSelected, int selectedItemPosition, long selectedId) {
@@ -169,31 +135,6 @@ public class MainActivity extends AppCompatActivity {
         return selected;
     }
 
-//    public Double getUpEditText() {
-//        Double selected = Double.parseDouble(upEditText.getText().toString());
-//        return selected;
-//    }
-//
-//    public Double getDownEditText() {
-//        Double selected = Double.parseDouble(downEditText.getText().toString());
-//        return selected;
-//    }
-//
-//    private void setUpEditText(String sum){
-//        upEditText.setText(sum);
-//    }
-//
-//    private void setDownEditText(String sum){
-//        upEditText.setText(sum);
-//    }
-
-//    private void setTest(String string){
-//        test.setText(string);
-//    }
-
-
-
-    //String text = mySpinner.getSelectedItem().toString();
 
     private void setApi() {
         api = Request.Factory.createPostsApi();
