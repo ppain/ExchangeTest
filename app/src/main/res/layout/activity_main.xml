@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Spinner
+        android:id="@+id/downSpinner"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="283dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/downEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleDownTextView"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/titleDownTextView"
+        android:layout_width="129dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="16dp"
+        android:text="Конвертировать в"
+        app:layout_constraintBottom_toTopOf="@+id/downSpinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upSpinner"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/upSpinner"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="47dp"
+        app:layout_constraintBottom_toTopOf="@+id/titleDownTextView"
+        app:layout_constraintEnd_toStartOf="@+id/upEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleUpTextView"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/titleUpTextView"
+        android:layout_width="134dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="35dp"
+        android:text="Конвертировать из"
+        app:layout_constraintBottom_toTopOf="@+id/upSpinner"
+        app:layout_constraintStart_toStartOf="@+id/upSpinner"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <EditText
+        android:id="@+id/upEditText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="74dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/downEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/upSpinner"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/downEditText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="289dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/downSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/upEditText" />
+
+
+</android.support.constraint.ConstraintLayout>
